@@ -10,7 +10,7 @@
 
 
 ## Demo
-Here is a working live demo : https://piyush-eon.github.io/react-news-app-inshorts-clone/
+Here is a working live demo : https://inshorts-react-clone.netlify.app/
 
 ## Detailes
 The news data is fetched from NewsApi : https://saurav.tech/NewsAPI/
