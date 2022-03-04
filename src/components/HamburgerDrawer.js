@@ -20,6 +20,12 @@ export default function SwipeableTemporaryDrawer({ setCategory, setLoadMore }) {
       mode: "dark",
     },
   });
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -54,6 +60,7 @@ export default function SwipeableTemporaryDrawer({ setCategory, setLoadMore }) {
             onClick={() => {
               setCategory(text);
               setLoadMore(14);
+              scrollToTop();
             }}
           >
             <ListItemText primary={text} />

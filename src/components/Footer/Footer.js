@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <span className="name">
-        Inshorts clone made by -
+        Inshorts clone made by -{" "}
         <a href="http://www.linkedin.com/in/krishnaprasadek" target="__blank">
           Krishnaprasad E K
         </a>
