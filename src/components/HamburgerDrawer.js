@@ -8,19 +8,9 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import { createTheme, ThemeProvider } from "@mui/material";
-import { makeStyles } from "@mui/styles";
 import categories from "../data/category";
 
-const useStyles = makeStyles({
-  list: {
-    width: 200,
-    paddingLeft: 10,
-    paddingRight: 5,
-  },
-});
-
 export default function SwipeableTemporaryDrawer({ setCategory, setLoadMore }) {
-  const classes = useStyles();
   const [state, setState] = React.useState({
     left: false,
   });
@@ -45,10 +35,8 @@ export default function SwipeableTemporaryDrawer({ setCategory, setLoadMore }) {
 
   const list = (anchor) => (
     <Box
-      sx={{
-        width: anchor === "top" || anchor === "bottom" ? "auto" : 200,
-      }}
-      className={classes.list}
+      style={{ paddingLeft: 10, paddingRight: 5 }}
+      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 200 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
@@ -58,14 +46,14 @@ export default function SwipeableTemporaryDrawer({ setCategory, setLoadMore }) {
       </List>
       <Divider />
       <List>
-        {categories.map((text, index) => (
+        {categories.map((text) => (
           <ListItem
+            style={{ height: 40, borderRadius: 3 }}
             button
-            sx={{ height: 40, borderRadius: 3 }}
             key={text}
             onClick={() => {
               setCategory(text);
-              setLoadMore(15);
+              setLoadMore(14);
             }}
           >
             <ListItemText primary={text} />

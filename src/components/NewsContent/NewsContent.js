@@ -1,15 +1,15 @@
-import React from "react";
-import Container from "@mui/material/Container";
 import "./NewsContent.css";
+import React from "react";
+import { Container } from "@mui/material";
 import NewsCard from "../NewsCard/NewsCard";
 
-const NewsContent = ({ newsArray, newsResults, setLoadMore, loadMore }) => {
+const NewsContent = ({ newsArray, newsResults, loadMore, setLoadMore }) => {
   return (
     <Container maxWidth="md">
       <div className="content">
         <div className="downloadMessage">
           <span className="downloadText">
-            For the best experience use inshorts app on your smartphone
+            For the best experience use Inshorts App on your smartphone
           </span>
           <img
             alt="app store"
@@ -22,16 +22,16 @@ const NewsContent = ({ newsArray, newsResults, setLoadMore, loadMore }) => {
             src="https://assets.inshorts.com/website_assets/images/playstore.png"
           />
         </div>
-        {newsArray.slice(0, loadMore).map((newsItem, i) => (
-          <NewsCard key={i} newsItem={newsItem} />
-        ))}
 
+        {newsArray.slice(0, loadMore).map((newsItem, i) => (
+          <NewsCard newsItem={newsItem} key={i} />
+        ))}
         {loadMore <= newsResults && (
           <>
             <hr />
             <button
               className="loadMore"
-              onClick={() => setLoadMore(loadMore + 15)}
+              onClick={() => setLoadMore(loadMore + 14)}
             >
               Load More
             </button>

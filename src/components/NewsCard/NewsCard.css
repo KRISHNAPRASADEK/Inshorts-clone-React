@@ -31,7 +31,7 @@
   padding: 10px 0;
 }
 
-.readmore {
+.readMore {
   font-size: 12px;
   font-weight: 400;
   padding-top: 10px;
@@ -68,6 +68,7 @@
   .newsCard {
     flex-direction: column;
   }
+
   .newsImage {
     width: 100%;
     height: 100%;
