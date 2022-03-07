@@ -1,8 +1,9 @@
-# React Inshorts Clone
+# React Inshorts Clone - Complete Responsive
 <table>
 <tr>
 <td>
-  This a clone of Inshorts a news website built using react and material ui
+  
+  This a clone of Inshorts a news website built using react and material ui.
 </td>
 </tr>
 </table>
